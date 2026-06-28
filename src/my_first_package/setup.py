@@ -27,6 +27,7 @@ setup(
         'hello_node = my_first_package.hello_node:main',
         'inspection_camera_node = my_first_package.inspection_camera_node:main',
         'inspection_node = my_first_package.inspection_node:main',
+        'inspection_service = my_first_package.inspection_service:main',
     ],
   },
 )

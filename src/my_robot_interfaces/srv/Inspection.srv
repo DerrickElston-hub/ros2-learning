@@ -1,0 +1,5 @@
+int32 part_id
+---
+bool passed
+float32 confidence
+string message
