@@ -1,4 +1,6 @@
 from setuptools import find_packages, setup
+from glob import glob
+import os
 
 package_name = 'my_first_package'
 
@@ -10,6 +12,8 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share', package_name, 'launch'),
+        glob('launch/*.launch.py')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -28,6 +32,7 @@ setup(
         'inspection_camera_node = my_first_package.inspection_camera_node:main',
         'inspection_node = my_first_package.inspection_node:main',
         'inspection_service = my_first_package.inspection_service:main',
+        'inspection_parameter_node = my_first_package.inspection_parameter_node:main',
     ],
   },
 )
